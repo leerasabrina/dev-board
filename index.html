@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBoard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              },
+              fontFamily: {
+                poppins: ['Poppins', 'sans-serif'],
+              },
+            },
+          },
+        }
+      </script>
+</head>
+<body class="font-poppins lg:px-[100px] lg:py-[20px] p-4 bg-slate-200" id="body">
+    <header class="">
+        <nav class="bg-white rounded-xl flex items-center justify-between p-4">
+            <div class="flex w-24 items-center">
+                <img class="w-1/2 inline-block" src="assets/logo.png" alt="devboard-logo">
+                <h2 class="text-3xl">Dev<span class="font-bold">Board</span></h2>
+            </div>
+            <div class="flex items-center gap-4">
+              <button class="rounded-xl px-6 py-2 bg-slate-100 flex gap-2 text-xl">
+                <img src="assets/checkbox.png" alt=""><span id="nav-num">23</span>
+                
+              </button>
+              <button class="w-10 h-10 rounded-full bg-slate-300 p-1" id="color-btn">
+                <img src="assets/theme-btn.png" alt="">
+              </button>
+            </div>
+        </nav>
+    </header>
+    <main class="grid grid-cols-4 gap-4 py-4">
+        <!-- main task section -->
+        <section class="bg-white p-4 rounded-lg col-span-3 ">
+            <div class="flex justify-between gap-4">
+            <!-- main part er nav er 1st card -->
+            <div class="w-2/5 justify-center rounded-xl  bg-slate-100 py-2 flex items-center gap-4">
+                <button class="p-2 w-9 rounded-full bg-white">
+                    <img src="assets/checkbox.png" alt="">
+                </button>
+                <div>
+                    <p>Task Assigned </p>
+                    <span class="font-bold text-2xl">05</span>
+                </div>
+                
+            </div>
+            <!-- 2nd card nav -->
+            <div class="w-3/5  flex gap-4 items-center rounded-xl bg-gradient-to-r from-blue-500 via-indigo-400 to-indigo-300 p-4">
+                <img src="assets/board.png" alt="">
+                <p class="text-white text-xl font-semibold">Discover Something <br> New Today!</p>
+
+            </div>
+            <!-- 3rd card nav -->
+            <div class="w-2/5  p-4 rounded-xl bg-slate-100">
+                <div class="flex justify-center items-center py-4 gap-6">
+                    <div class="p-2 bg-white rounded-full"><img src="assets/calender.png" alt=""></div>
+                    <div id="get-date"></div>
+                </div>
+            </div>
+        </div>
+            <div class="mt-4 border-t-2 border-dashed grid grid-cols-3 gap-x-4">
+                <!-- 1st card -->
+                <div class="bg-slate-100 rounded-xl mt-4 py-4 px-6 space-y-2">
+                    <button class="bg-white p-2 rounded-lg">ShopEase</button>
+                    <h2 class="font-semibold text-xl">Fix Mobile Button Issue </h2>
+                    <p class="text-ellipsis whitespace-nowrap  overflow-hidden bg-white text-slate-500 rounded-lg w-full h-20 p-4">Resolve button alignment <br> and responsiveness issues on mobile devices. Ensure touch-friendly button sizes for better usability. Test across multiple screen sizes to guarantee a seamless experience.</p>
+                    <hr class="border-b-2 border-dashed">
+                    <div class="flex justify-between">
+                   <p><span class="text-slate-500">Deadline</span><br>
+                21 March 2025</p>
+                   <button class="bg-blue-600 text-white p-2 rounded-xl">Completed</button></div>
+
+                </div>
+                <!-- 2nd card -->
+                <div class="bg-slate-100 rounded-xl mt-4 py-4 px-6 space-y-2">
+                    <button class="bg-white p-2 rounded-lg">CloudSync</button>
+                    <h2 class="font-semibold text-xl">Add Dark Mode </h2>
+                    <p class="text-ellipsis whitespace-nowrap  overflow-hidden bg-white text-slate-500 rounded-lg w-full h-20 p-4">Implement toggle-based <br> dark mode for a better user experience. Ensure proper contrast and readability in both light and dark themes. Optimize UI components to adapt smoothly to the theme switch</p>
+                    <hr class="border-b-2 border-dashed">
+                    <div class="flex justify-between">
+                   <p><span class="text-slate-500">Deadline</span><br>
+                21 March 2025</p>
+                   <button class="bg-blue-600 text-white p-2 rounded-xl">Completed</button></div>
+
+                </div>
+                <!-- 3rd card -->
+                <div class="bg-slate-100 rounded-xl mt-4 py-4 px-6 space-y-2">
+                    <button class="bg-white p-2 rounded-lg">SwiftPay</button>
+                    <h2 class="font-semibold text-xl">Optimize  Home page </h2>
+                    <p class="text-ellipsis whitespace-nowrap  overflow-hidden bg-white text-slate-500 rounded-lg w-full h-20 p-4">Improve page load speed <br> by optimizing images and reducing unnecessary scripts. Enhance UI/UX for better navigation and accessibility. Implement lazy loading to improve performance and efficiency.</p>
+                    <hr class="border-b-2 border-dashed">
+                    <div class="flex justify-between">
+                   <p><span class="text-slate-500">Deadline</span><br>
+                21 March 2025</p>
+                   <button class="bg-blue-600 text-white p-2 rounded-xl">Completed</button></div>
+
+                </div>
+                <!-- 4th card -->
+                <div class="bg-slate-100 rounded-xl mt-4 py-4 px-6 space-y-2">
+                    <button class="bg-white p-2 rounded-lg">Meta</button>
+                    <h2 class="font-semibold text-xl">Add new emoji 🤲 </h2>
+                    <p class="text-ellipsis whitespace-nowrap  overflow-hidden bg-white text-slate-500 rounded-lg w-full h-20 p-4">Introduce this emoji <br> across the platform to enhance user interaction. Ensure compatibility across different devices and browsers. Update the emoji database to support the latest Unicode characters.</p>
+                    <hr class="border-b-2 border-dashed">
+                    <div class="flex justify-between">
+                   <p><span class="text-slate-500">Deadline</span><br>
+                21 March 2025</p>
+                   <button class="bg-blue-600 text-white p-2 rounded-xl">Completed</button></div>
+
+                </div>
+                <!-- 5th card -->
+                <div class="bg-slate-100 rounded-xl mt-4 py-4 px-6 space-y-2">
+                    <button class="bg-white p-2 rounded-lg">Google LLC</button>
+                    <h2 class="font-semibold text-xl">Integrate OpenAI API  </h2>
+                    <p class="text-ellipsis whitespace-nowrap  overflow-hidden bg-white text-slate-500 rounded-lg w-full h-20 p-4">Use OpenAI API to <br> generate personalized job recommendations based on user preferences. Implement AI-driven resume suggestions for better job matching. Ensure seamless API integration with optimized response time.</p>
+                    <hr class="border-b-2 border-dashed">
+                    <div class="flex justify-between">
+                   <p><span class="text-slate-500">Deadline</span><br>
+                21 March 2025</p>
+                   <button class="bg-blue-600 text-white p-2 rounded-xl">Completed</button></div>
+
+                </div>
+                <!-- 6th card -->
+                <div class="bg-slate-100 rounded-xl mt-4 py-4 px-6 space-y-2">
+                    <button class="bg-white p-2 rounded-lg">Glassdoar</button>
+                    <h2 class="font-semibold text-xl">Improve Job searching</h2>
+                    <p class="text-ellipsis whitespace-nowrap  overflow-hidden bg-white text-slate-500 rounded-lg w-full h-20 p-4">Enhance the job search <br> algorithm to provide more accurate and relevant job listings. Implement filters and sorting options to improve user experience. Optimize the backend to ensure faster and more efficient search results.</p>
+                    <hr class="border-b-2 border-dashed">
+                    <div class="flex justify-between">
+                   <p><span class="text-slate-500">Deadline</span><br>
+                21 March 2025</p>
+                   <button class="bg-blue-600 text-white p-2 rounded-xl">Completed</button></div>
+
+                </div>
+                
+                
+            </div>
+           
+        </section>
+        <!-- history section -->
+        <section class="bg-white p-4 rounded-lg col-span-1 text-center">
+            <div class="border-b-2 border-dashed py-4">
+           <div class="flex justify-center pb-2 gap-2">
+            <img src="assets/activity.png" alt="">
+            <span class="font-normal text-xl">Activity Log</span>
+           </div>
+           <button id="history-btn" class="bg-blue-600 text-white py-2  px-4 rounded-lg">Clear History</button>
+        </div>
+        </section>
+    </main>
+    
+  <script src="script.js"></script>
+</body>
+</html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevBoard</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -22,7 +23,7 @@
       </script>
 </head>
 <body class="font-poppins lg:px-[100px] lg:py-[20px] p-4 bg-slate-200" id="body">
-    <header class="">
+    <header>
         <nav class="bg-white rounded-xl flex items-center justify-between p-4">
             <div class="flex w-24 items-center">
                 <img class="w-1/2 inline-block" src="assets/logo.png" alt="devboard-logo">
@@ -39,7 +40,7 @@
             </div>
         </nav>
     </header>
-    <main class="grid grid-cols-4 gap-4 py-4">
+    <main class="grid lg:grid-cols-4 gap-4 py-4 grid-cols-1">
         <!-- main task section -->
         <section class="bg-white p-4 rounded-lg col-span-3 ">
             <div class="flex justify-between gap-4">
@@ -49,13 +50,13 @@
                     <img src="assets/checkbox.png" alt="">
                 </button>
                 <div>
-                    <p>Task Assigned </p>
-                    <span class="font-bold text-2xl">05</span>
+                    <p>Task Assigned</p>
+                    <span id="task-num" class="font-bold text-2xl">06</span>
                 </div>
                 
             </div>
             <!-- 2nd card nav -->
-            <div class="w-3/5  flex gap-4 items-center rounded-xl bg-gradient-to-r from-blue-500 via-indigo-400 to-indigo-300 p-4">
+            <div id="blue-card" class="w-3/5  flex gap-4 items-center rounded-xl bg-gradient-to-r from-blue-500 via-indigo-400 to-indigo-300 p-4">
                 <img src="assets/board.png" alt="">
                 <p class="text-white text-xl font-semibold">Discover Something <br> New Today!</p>
 
@@ -78,7 +79,7 @@
                     <div class="flex justify-between">
                    <p><span class="text-slate-500">Deadline</span><br>
                 21 March 2025</p>
-                   <button class="bg-blue-600 text-white p-2 rounded-xl">Completed</button></div>
+                   <button  class="bg-blue-600 text-white p-2 rounded-xl complete btn btn-primary">Completed</button></div>
 
                 </div>
                 <!-- 2nd card -->
@@ -90,7 +91,7 @@
                     <div class="flex justify-between">
                    <p><span class="text-slate-500">Deadline</span><br>
                 21 March 2025</p>
-                   <button class="bg-blue-600 text-white p-2 rounded-xl">Completed</button></div>
+                   <button  class="bg-blue-600 text-white p-2 rounded-xl complete btn btn-primary">Completed</button></div>
 
                 </div>
                 <!-- 3rd card -->
@@ -102,7 +103,7 @@
                     <div class="flex justify-between">
                    <p><span class="text-slate-500">Deadline</span><br>
                 21 March 2025</p>
-                   <button class="bg-blue-600 text-white p-2 rounded-xl">Completed</button></div>
+                   <button  class="bg-blue-600 text-white p-2 rounded-xl complete btn btn-primary">Completed</button></div>
 
                 </div>
                 <!-- 4th card -->
@@ -114,7 +115,7 @@
                     <div class="flex justify-between">
                    <p><span class="text-slate-500">Deadline</span><br>
                 21 March 2025</p>
-                   <button class="bg-blue-600 text-white p-2 rounded-xl">Completed</button></div>
+                   <button  class="bg-blue-600 text-white p-2 rounded-xl complete btn btn-primary">Completed</button></div>
 
                 </div>
                 <!-- 5th card -->
@@ -126,7 +127,7 @@
                     <div class="flex justify-between">
                    <p><span class="text-slate-500">Deadline</span><br>
                 21 March 2025</p>
-                   <button class="bg-blue-600 text-white p-2 rounded-xl">Completed</button></div>
+                   <button class="bg-blue-600 text-white p-2 rounded-xl complete btn btn-primary">Completed</button></div>
 
                 </div>
                 <!-- 6th card -->
@@ -138,7 +139,7 @@
                     <div class="flex justify-between">
                    <p><span class="text-slate-500">Deadline</span><br>
                 21 March 2025</p>
-                   <button class="bg-blue-600 text-white p-2 rounded-xl">Completed</button></div>
+                   <button  class="bg-blue-600 complete text-white p-2 rounded-xl btn btn-primary">Completed</button></div>
 
                 </div>
                 
@@ -153,11 +154,18 @@
             <img src="assets/activity.png" alt="">
             <span class="font-normal text-xl">Activity Log</span>
            </div>
-           <button id="history-btn" class="bg-blue-600 text-white py-2  px-4 rounded-lg">Clear History</button>
+           <button id="history-btn" class="bg-blue-600 text-white py-2  px-4 rounded-lg btn">Clear History</button>
         </div>
+       <ul id="ul" class="list-none space-y-2">
+        
+        
+
+       </ul>
+        
         </section>
     </main>
     
+  
   <script src="script.js"></script>
 </body>
 </html>

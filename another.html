@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body class="lg:px-[100px] lg:py-[20px] p-4 bg-slate-200 ">
+    <header>
+        <nav class="rounded-xl w-full bg-white flex justify-between items-center p-2">
+             <div class="flex gap-2 items-center">
+                <div class="w-1/2">
+                 <img src="assets/logo.png" alt="">
+                </div>
+                <h2 class="text-3xl">Dev<span class="font-bold">Board</span></h2>
+            </div>
+            <div class=" rounded-xl">
+                    <button id="btn" class="btn bg-indigo-600 text-white">Back to Desk</buttton>
+                </div>
+            
+        </nav>
+    </header>
+    <main class="space-y-4">
+        <h2 class="text-2xl font-bold text-center py-4">Blogs</h2>
+
+        <section class="bg-white rounded-lg p-2 w-full">
+            <h2 class="p-2 border-b-2 border-dashed border-gray-300 text-xl font-semibold">Question-1: What are the different ways to select an element in the DOM?</h2>
+            <p class="text-xl text-gray-500 py-4">
+                There are many ways to select an element in the DOM. It's given below:
+                1. getElementById, 2. getElementsByClassName, 3. querySelectorAll, 4. querySelector.
+            </p>
+        </section>
+
+        <section class="bg-white rounded-lg p-2 w-full">
+            <h2 class="p-2 border-b-2 border-dashed border-gray-300 text-xl font-semibold">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h2>
+            <p class="text-xl text-gray-500 py-4">The main difference among them is how they handle html tags.innerText sets the visible text. However textContent sets visible,invisilbe text both and innerHTML sets whole text,tags,styles etc.</p>
+
+        </section>
+        <section class="bg-white rounded-lg p-2 w-full">
+            <h2 class="p-2 border-b-2 border-dashed border-gray-300 text-xl font-semibold">Question-3: What is event delegation in the DOM?</h2>
+            <p class="text-xl text-gray-500 py-4">
+                Event delegation is a process in JavaScript by whom a single event listener is added to a parent element to handle events for child elements.
+            </p>
+        </section>
+        <section class="bg-white rounded-lg p-2 w-full">
+            <h2 class="p-2 border-b-2 border-dashed border-gray-300 text-xl font-semibold"> Question-4: What is event bubbling in the DOM?
+            </h2>
+            <p class="text-xl text-gray-500 py-4">Event bubbling is a DOM event propagation model where an event starts at the target element and "bubbles up" to the parent elements.</p>
+        </section>
+        <section class="bg-white rounded-lg p-2 w-full">
+            <h2 class="p-2 border-b-2 border-dashed border-gray-300 text-xl font-semibold"> Question-5: How do you create, add, and remove elements using JavaScript?
+            </h2>
+            <p class="text-xl text-gray-500 py-4">
+                To create an element :
+                 document.createElement(). To add an element:
+                   parentElement.appendChild(). To remove an element:
+                     parentElement.removeChild().
+            </p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+    <script>
+       document.getElementById('btn').addEventListener('click', function(){
+        window.location.href = 'index.html';
+       })
+    </script>
+</body>
+
+</html>
